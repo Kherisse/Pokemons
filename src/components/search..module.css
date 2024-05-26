@@ -1,0 +1,12 @@
+.searchLogo {
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  justify-content: center;
+  display: inline-block;
+  align-content: center;
+}
+.searchLogo img {
+  height: 200px;
+  max-width: auto;
+}
