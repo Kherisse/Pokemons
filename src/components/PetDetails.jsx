@@ -29,7 +29,7 @@ export default function PetDetails() {
           alt=""
         />
         <h1 className="font-bold mt-5 uppercase">{petData?.name}</h1>
-        <h1>{petData?.id}</h1>
+        <h1>POKEMON ID: {petData?.id}</h1>
         <div className="divider"></div>
         <h1>Weight: {petData?.weight}</h1>
       </div>
