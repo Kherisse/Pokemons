@@ -18,7 +18,7 @@ export default function PetItem({ pet, setPetId }) {
         <div className="card-actions justify-end">
           <button
             onClick={() => {
-              console.log(pet.is);
+              console.log(pet.name);
               setPetId(pet.id);
             }}
             className="btn btn-primary btn-xs"
