@@ -12,7 +12,6 @@ import "./App.css";
 
 function App() {
   const [petData, setPetData] = useState([]);
-  const [petId, setPetId] = useState("");
 
   return (
     <>
@@ -22,8 +21,8 @@ function App() {
         <Search petData={petData} setPetData={setPetData} />
         <Container>
           <div className="grid grid-cols-4 gap-1 p-5 bg-indigo-500/20 mx-auto w-100 mr-5 rounded-lg ">
-            <PetList setPetId={setPetId} petData={petData} />
-            <PetDetails setPetId={setPetId} />
+            <PetList petData={petData} />
+            <PetDetails />
           </div>
         </Container>
       </main>

@@ -1,6 +1,9 @@
 import React from "react";
+import { useDataStore } from "../context/DataStoreContext";
 
 const Nav = () => {
+  const { setSelectedPokemon } = useDataStore();
+
   return (
     <div>
       <div className="navbar bg-base-100 fixed top-0 left-0 right-0 z-40">
@@ -16,6 +19,7 @@ const Nav = () => {
         <div className="flex-none gap-2">
           <div className="form-control">
             <input
+              onChange={(e) => setSelectedPokemon(e.target.value)}
               type="text"
               placeholder="Search"
               className="input input-bordered w-24 md:w-auto"

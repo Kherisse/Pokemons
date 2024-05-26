@@ -1,6 +1,9 @@
 // import React from "react";
 
-export default function PetItem({ pet, setPetId }) {
+import { useDataStore } from "../context/DataStoreContext";
+
+export default function PetItem({ pet }) {
+  const { setSelectedPokemon } = useDataStore();
   return (
     <div className="card card-side bg-base-100 shadow-xl mx-auto hover:scale-110">
       <figure>
@@ -18,8 +21,8 @@ export default function PetItem({ pet, setPetId }) {
         <div className="card-actions justify-end">
           <button
             onClick={() => {
+              setSelectedPokemon(pet.name);
               console.log(pet.name);
-              setPetId(pet.id);
             }}
             className="btn btn-primary btn-xs"
           >
