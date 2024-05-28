@@ -5,7 +5,7 @@ import { useDataStore } from "../context/DataStoreContext";
 export default function PetItem({ pet }) {
   const { setSelectedPokemon } = useDataStore();
   return (
-    <div className="card card-side bg-base-100 shadow-xl mx-auto hover:scale-110">
+    <div className="card card-side bg-base-100 shadow-xl mx-auto hover:scale-110 max-w-46">
       <figure>
         <img
           className="mx-auto h-full"

@@ -1,0 +1,23 @@
+*****************PETLIST 05-28-24
+
+// import React from "react";
+import PetItem from "./PetItem";
+
+export default function PetList({ petData }) {
+  return (
+    <div className="grid col-span-2 p-3 sm:p-1 gap-2 mb-2 bg-indigo-500/20 sm:mx-auto rounded-md">
+      <div className="mockup-phone border-primary">
+        <div className="camera"></div>
+        <div className="display">
+          <div className="artboard artboard-demo phone-1 max-h-screen overflow-y-auto pt-10">
+            {petData.map((pet) => (
+              <PetItem key={pet.name} pet={pet} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+********************************

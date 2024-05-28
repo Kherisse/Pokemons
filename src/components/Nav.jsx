@@ -16,13 +16,13 @@ const Nav = () => {
             />
           </a>
         </div>
-        <div className="flex-none gap-2">
+        <div className="flex-2 gap-">
           <div className="form-control">
             <input
               onChange={(e) => setSelectedPokemon(e.target.value)}
               type="text"
-              placeholder="Search"
-              className="input input-bordered w-24 md:w-auto"
+              placeholder="Enter Pokemon name.."
+              className="input input-bordered w-50 md:w-auto"
             />
           </div>
           <div className="dropdown dropdown-end">
