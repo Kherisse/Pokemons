@@ -8,6 +8,8 @@ export default function PetDetails() {
   const URL = `https://pokeapi.co/api/v2/pokemon/`;
   const petNumber = petData?.id;
   const formattedId = String(petNumber).padStart(3, "0");
+  const defaultImageUrl =
+    "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png";
 
   useEffect(() => {
     async function fetchPokemon() {
@@ -31,52 +33,64 @@ export default function PetDetails() {
               </h1>
               <img
                 className="h-72 mx-auto mt-5 border-violet-700 rounded-lg"
-                src={`https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/${formattedId}.png`}
+                src={
+                  petData
+                    ? `https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/${formattedId}.png`
+                    : defaultImageUrl
+                }
                 alt=""
               />
               <h1 className="font-bold mt-5 uppercase text-3xl text-yellow-500">
-                {petData?.name}
+                {petData?.name || "No Pokémon selected"}
               </h1>
-              <h1 className="font-bold">POKEMON ID: {petData?.id}</h1>
+              <h1 className="font-bold">POKEMON ID: {petData?.id || "N/A"}</h1>
 
               <div className="divider"></div>
               <p>
-                Height: {petData?.height}
-                <span> Weight: {petData?.weight}</span>
+                Height: {petData?.height || "N/A"}
+                <span> Weight: {petData?.weight || "N/A"}</span>
               </p>
               <div className="divider"></div>
               <p>
                 Type:{" "}
                 {petData?.types
                   ?.map((typeInfo) => typeInfo.type.name)
-                  .join(", ")}
+                  .join(", ") || "N/A"}
               </p>
               <p>
                 Abilities:{" "}
                 {petData?.abilities
                   ?.map((abilityInfo) => abilityInfo.ability.name)
-                  .join(", ")}
+                  .join(", ") || "N/A"}
               </p>
               <p>Stats:</p>
               <ul>
-                {petData?.stats?.map((statInfo) => (
-                  <li key={statInfo.stat.name}>
-                    {statInfo.stat.name}: {statInfo.base_stat}
-                  </li>
-                ))}
+                {petData?.stats?.length > 0
+                  ? petData.stats.map((statInfo) => (
+                      <li key={statInfo.stat.name}>
+                        {statInfo.stat.name}: {statInfo.base_stat}
+                      </li>
+                    ))
+                  : "N/A"}
               </ul>
               <p>Moves:</p>
               <ul>
-                {petData?.moves?.slice(0, 5).map((moveInfo) => (
-                  <li key={moveInfo.move.name}>{moveInfo.move.name}</li>
-                ))}
+                {petData?.moves?.length > 0
+                  ? petData.moves
+                      .slice(0, 5)
+                      .map((moveInfo) => (
+                        <li key={moveInfo.move.name}>{moveInfo.move.name}</li>
+                      ))
+                  : "N/A"}
               </ul>
-              <p>Species: {petData?.species?.name}</p>
+              <p>Species: {petData?.species?.name || "N/A"}</p>
               <p>Forms:</p>
               <ul>
-                {petData?.forms?.map((formInfo) => (
-                  <li key={formInfo.name}>{formInfo.name}</li>
-                ))}
+                {petData?.forms?.length > 0
+                  ? petData.forms.map((formInfo) => (
+                      <li key={formInfo.name}>{formInfo.name}</li>
+                    ))
+                  : "N/A"}
               </ul>
             </div>
           </div>
