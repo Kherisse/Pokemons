@@ -16,10 +16,10 @@ function App() {
 
   return (
     <>
-      <main className="p-5 w-screen flex-1 ">
+      <main className="p-5 w-fit flex-1 ">
         <Nav />
         <Homehero />
-        <HomeLogo />
+        {/* <HomeLogo /> */}
         <Search petData={petData} setPetData={setPetData} />
         <Container>
           <div className="grid sm:grid-cols-1 sm:grid-flow-row md:grid-cols-4 gap-1 p-5 bg-indigo-500/20 mx-auto w-100 mr-5 rounded-lg auto-cols-max ">
