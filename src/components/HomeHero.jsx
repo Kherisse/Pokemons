@@ -2,7 +2,7 @@ import pokes from "../assets/pokemon1.png";
 
 export default function Homehero() {
   return (
-    <div className="hero w-full mt-10 bg-base-200 mx-auto">
+    <div className="hero w-full mt-10 mx-auto">
       <div className="hero-content  flex flex-wrap">
         <img src={pokes} className="sm:max-w-sm rounded-lg shadow-2xl " />
         <div className="mx-auto text-center">
