@@ -6,10 +6,10 @@ export default function PetItem({ pet }) {
   const { setSelectedPokemon } = useDataStore();
 
   return (
-    <div className="card card-side bg-base-100 shadow-xl mx-auto hover:scale-110 min-w-72 max-w-80 ">
+    <div className="card card-side bg-base-100 shadow-xl mx-auto hover:scale-110 min-w-72 max-w-80 w-10">
       <figure>
         <img
-          className="mx-auto h-full sm:h-auto"
+          className="mx-auto h-32"
           src={`https://img.pokemondb.net/sprites/brilliant-diamond-shining-pearl/normal/1x/${pet.name}.png`}
           alt=""
         />
