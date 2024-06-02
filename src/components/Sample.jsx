@@ -5,7 +5,7 @@ export default function Sample({ pet }) {
   return (
     <>
       <div class="grid-cols-2 max-w-sm text-white border border-gray-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-2 md:min-w-36 md:max-w-36 sm:min-w-36 sm:max-w-36 sm:pb-2 sm:snap-mandatory sm:snap-x ">
-        <div class="flex flex-col items-center pb-10 p-5  sm:snap-center">
+        <div class="flex flex-col items-center pb-5 p-5  sm:snap-center">
           <img
             class="w-24 h-24 mb-3 shadow-lg"
             src={`https://img.pokemondb.net/sprites/brilliant-diamond-shining-pearl/normal/1x/${pet.name}.png`}
