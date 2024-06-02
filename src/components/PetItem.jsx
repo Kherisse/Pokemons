@@ -6,7 +6,8 @@ export default function PetItem({ pet }) {
   const { setSelectedPokemon } = useDataStore();
 
   return (
-    <div className="card mb-2 card-side bg-base-100 shadow-xl mx-auto hover:scale-110 min-w-72 max-w-80 w-10">
+    // <div className="card mb-2 card-side bg-base-100 shadow-xl mx-auto hover:scale-110 min-w-72 max-w-80 w-10">
+    <div className="card mb-2 card-side bg-base-100 shadow-xl mx-auto hover:scale-110">
       <figure>
         <img
           className="mx-auto h-32"

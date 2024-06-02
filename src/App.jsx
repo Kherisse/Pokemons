@@ -10,6 +10,7 @@ import { useState } from "react";
 
 import "./App.css";
 import Homehero from "./components/HomeHero.jsx";
+import Sample from "./components/Sample.jsx";
 
 function App() {
   const [petData, setPetData] = useState([]);
@@ -19,6 +20,7 @@ function App() {
       <main className="p-5 w-screen flex-1 ">
         <Nav />
         <Homehero />
+        {/* <Sample petData={petData} setPetData={setPetData} /> */}
         {/* <HomeLogo /> */}
         <Search petData={petData} setPetData={setPetData} />
         <Container>
