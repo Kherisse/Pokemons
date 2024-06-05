@@ -23,7 +23,7 @@ export default function PetDetails() {
 
   return (
     // <div className="petDetailsDiv grid sm:col-span-1 md:col-span-3  gap-2 p-10 sm:mx-auto rounded-md">
-    <div className="petDetailsDiv p-10 rounded-md md:col-span-2 sm:col-span-1">
+    <div className="petDetailsDiv p-10 rounded-md md:col-span-2 sm:col-span-1 md:max-h-screen  overflow-y-auto">
       {/* <div className="mockup-phone border-primary max-h-full w-fit">
         <div className="camera"></div>
         <div className="display">
@@ -46,8 +46,8 @@ export default function PetDetails() {
 
         <div className="divider"></div>
         <p>
-          Height: {petData?.height || "N/A"}
-          <span> Weight: {petData?.weight || "N/A"}</span>
+          📏: {petData?.height || "N/A"}
+          <span> 🏋️: {petData?.weight || "N/A"}</span>
         </p>
         <div className="divider"></div>
         <p>
